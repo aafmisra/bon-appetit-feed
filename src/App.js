@@ -9,8 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      latestRecipe: 0,
-      latestStory: 0
+      latestRecipe: '',
+      latestStory: ''
     }
   }
 
@@ -35,7 +35,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.latestStory)
     return (
       <div className="App">
         <header>
@@ -43,16 +42,46 @@ class App extends Component {
           <p>a small sampling of ba's latest content</p>
         </header>
         <main>
-
-        {this.state.latestRecipe && (
-          <Recipe latestRecipe={this.state.latestRecipe} />
+          {this.state.latestRecipe && (
+            <Recipe latestRecipe={this.state.latestRecipe} />
           )}
-        {this.state.latestStory && (
-          <Story latestStory={this.state.latestStory} />
+          {this.state.latestStory && (
+            <Story latestStory={this.state.latestStory} />
           )}
-        <Video />
-          </main>
-          <footer></footer>
+        </main>
+        <div className="content video">
+          <h2>Latest Gourmet Makes</h2>
+          <Video />
+        </div>
+        <footer>
+          <p>
+            ©2020 Asha Misra{' '}
+            <span role="img" aria-label="elephant emoji">
+              &#128024;
+            </span>
+          </p>
+          <a
+            href="https://github.com/aafmisra/bon-appetit-feed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check out the repo on GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/asha-misra/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Find me on LinkedIn
+          </a>
+          <a
+            href="https://www.bonappetit.com/story/rss-feeds"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            bon appètit's RSS feeds
+          </a>
+        </footer>
       </div>
     );
 }

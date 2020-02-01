@@ -1,8 +1,98 @@
+:root {
+  --main: #e2e1e1;
+  --highlight: #ffda08;
+}
+
+:root,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  font-family: 'futura-pt', 'Helvetica Neue',Helvetica, Arial,sans-serif;
+  background-color: var(--main);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+}
+
+.content {
+  background-color: #fff;
+  margin: 20px 20px 20px 0;
+  padding: 0 10px 10px 10px;
+}
+
+h2 {
+  background-color: var(--highlight);
+  text-align: center;
+  display: inline;
+  padding: 10px;
   
+}
+
+.date {
+  margin-left: 10px;
+  font-size: 12px;
 }
 
 .thumbnail {
   width: 100%;
+  margin-top: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.video {
+  width: 600px;
+  margin-left: 20px;
+}
+
+iframe {
+  margin: 20px;
+}
+
+footer {
+  background-color: #fff;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 0.6;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 0;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+footer a:hover {
+  text-decoration: overline;
 }
