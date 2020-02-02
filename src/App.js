@@ -64,8 +64,9 @@ class App extends Component {
           </div>
         </main>
         <footer>
+          <p>Content: © Condé Nast 2020</p>
           <p>
-            ©2020 Asha Misra{' '}
+            Website: © 2020 Asha Misra{' '}
             <span role="img" aria-label="elephant emoji">
               &#128024;
             </span>
