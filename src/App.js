@@ -4,32 +4,35 @@ import Story from './Story';
 import Video from './Video';
 const convert = require('xml-js');
 
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       latestRecipe: '',
       latestStory: ''
-    }
+    };
   }
 
   componentDidMount() {
-    const recipeURL = 'https://www.bonappetit.com/feed/latest-recipes/rss'
+    const recipeURL = 'https://www.bonappetit.com/feed/latest-recipes/rss';
 
     fetch(recipeURL)
-    .then(response => response.text())
+      .then(response => response.text())
       .then(data => {
-        let result1 = JSON.parse(convert.xml2json(data, { compact: true, spaces: 4 }));
-        this.setState({ latestRecipe: result1 })
-      })
+        let result1 = JSON.parse(
+          convert.xml2json(data, { compact: true, spaces: 4 })
+        );
+        this.setState({ latestRecipe: result1 });
+      });
 
     const storyURL = 'https://www.bonappetit.com/feed/stories/rss';
 
     fetch(storyURL)
       .then(response => response.text())
       .then(data => {
-        let result2 = JSON.parse(convert.xml2json(data, { compact: true, spaces: 2 }));
+        let result2 = JSON.parse(
+          convert.xml2json(data, { compact: true, spaces: 2 })
+        );
         this.setState({ latestStory: result2 });
       });
   }
@@ -91,7 +94,7 @@ class App extends Component {
         </footer>
       </div>
     );
-}
+  }
 }
 
 export default App;

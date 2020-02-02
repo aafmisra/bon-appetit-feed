@@ -8,7 +8,7 @@ body,
 
 body {
   margin: 0;
-  font-family: 'futura-pt', 'Helvetica Neue',Helvetica, Arial,sans-serif;
+  font-family: 'futura-pt', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #e2e1e1;
 }
 
@@ -19,7 +19,7 @@ body {
 
 header {
   background-color: #000;
-  color: #fff; 
+  color: #fff;
   padding-left: 20px;
   margin-bottom: 10px;
 }
@@ -52,7 +52,6 @@ h2 {
   text-align: center;
   display: inline;
   padding: 10px;
-  
 }
 
 .date {
