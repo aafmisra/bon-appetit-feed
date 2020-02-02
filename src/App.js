@@ -48,11 +48,18 @@ class App extends Component {
           {this.state.latestStory && (
             <Story latestStory={this.state.latestStory} />
           )}
+          <div className="content video">
+            <h2>Latest Gourmet Makes</h2>
+            <Video />
+            <a
+              href="https://www.youtube.com/user/BonAppetitDotCom"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>More Videos</button>
+            </a>
+          </div>
         </main>
-        <div className="content video">
-          <h2>Latest Gourmet Makes</h2>
-          <Video />
-        </div>
         <footer>
           <p>
             ©2020 Asha Misra{' '}
